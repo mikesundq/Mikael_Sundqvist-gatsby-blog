@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-
+    
     body, html {
         font-family: ${props => props.theme.fonts.main};
         height: 100%;
@@ -18,9 +18,9 @@ const GlobalStyles = createGlobalStyle`
 `
 
 export const wrapRootElement = ({ element }) => (
-    <ThemeProvider theme={Theme}>
-        <GlobalStyles>
-            {element}
-        </GlobalStyles>
+   <ThemeProvider theme={Theme}>
+         <GlobalStyles/>
+        {element}
     </ThemeProvider>
+
 )

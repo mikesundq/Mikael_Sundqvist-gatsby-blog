@@ -1,5 +1,17 @@
 import React from "react"
+import { 
+  Container,
+  FeatureImage
 
-export default function Home() {
-  return <div>Achtung Welt!</div>
+} from "../components"
+
+const index = () => {
+  return (
+    <Container>
+      <FeatureImage/>
+        {/* Achtung Welt! */}
+    </Container>
+  )
 }
+
+export default index

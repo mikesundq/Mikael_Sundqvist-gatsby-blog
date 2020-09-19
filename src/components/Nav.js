@@ -10,6 +10,10 @@ export const Nav = () => {
             logo: file(relativePath: { eq: "logo.svg" }) {
                 publicURL
             }
+            about: file(relativePath: { eq: "about-icon.svg" }) {
+                publicURL
+            }
+            
         }
 
     `)
@@ -18,6 +22,9 @@ export const Nav = () => {
         <NavWrapper>
             <Link to="/">
                 <img src={data.logo.publicURL} alt="My Logo"/>
+            </Link>
+            <Link to="/about">
+                <img src={data.about.publicURL} alt="About"/>
             </Link>
         </NavWrapper>
     )

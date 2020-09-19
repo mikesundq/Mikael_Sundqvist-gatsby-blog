@@ -1,6 +1,15 @@
 import React from "react"
+import { 
+  Container,
+  FeatureImage
+
+} from "../components"
 
 
 export default () => (
-   <p>Hola!</p>
+   
+   <Container>
+       <FeatureImage/>
+
+   </Container>
 )

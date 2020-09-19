@@ -25,9 +25,6 @@ export const Footer = () => {
     `
     )
     
-    
-    
-    
     return (
         <FooterWrapper>
             <FooterSocialWrapper>

@@ -1,7 +1,8 @@
 import React from "react"
 import { 
   Container,
-  FeatureImage
+  FeatureImage,
+  Content
 
 } from "../components"
 
@@ -9,7 +10,7 @@ const index = () => {
   return (
     <Container>
       <FeatureImage/>
-        {/* Achtung Welt! */}
+       <Content></Content>
     </Container>
   )
 }

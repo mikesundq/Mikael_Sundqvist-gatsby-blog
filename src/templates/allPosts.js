@@ -22,6 +22,7 @@ const allPosts = ({pageContext, data}) => {
         <Container>
             <FeatureImage/>
             <Content>
+                {/* i've allready set this h1 to width 100% */}
                 <H1 margin="0 0 1rem 0">
                 My Glorious Blog
                 </H1>

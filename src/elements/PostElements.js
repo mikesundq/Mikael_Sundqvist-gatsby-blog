@@ -7,10 +7,8 @@ export const PostWrapper = styled.main`
     padding: ${props => `${props.theme.spacings.large} ${props.theme.spacings.medium}`};
     box-shadow: ${props => props.theme.shadows.shadow1};
     z-index: 10;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+
+
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2 / span 6;
     }
@@ -18,6 +16,5 @@ export const PostWrapper = styled.main`
     @media ${props => props.theme.breakpoints.mobile} {
         padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
     }
-
 
 `

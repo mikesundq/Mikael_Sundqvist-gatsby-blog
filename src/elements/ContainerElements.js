@@ -4,7 +4,7 @@ export const ContainerWrapper = styled.div`
 
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 5.2rem)) 1fr;
     grid-template-rows: 5rem 20rem 5rem auto;
     gap: 0 2rem;
     /* z-index: 6; */

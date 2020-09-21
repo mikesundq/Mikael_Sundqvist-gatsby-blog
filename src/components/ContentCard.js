@@ -1,6 +1,6 @@
 import React from "react"
 import { CardWrapper, P , H2 } from "../elements"
-import Button from "./Content"
+import { Button } from "../components"
 
 export const ContentCard = ({date, title, excerpt, slug}) => {
 
@@ -18,7 +18,5 @@ export const ContentCard = ({date, title, excerpt, slug}) => {
             <Button href={ "/" + slug }>Read More</Button>
         </CardWrapper>
     )
-
-
 
 }

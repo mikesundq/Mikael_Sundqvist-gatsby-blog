@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: "My Glorious Blog",
     description: "A simple blog built with Gatsby and MDX",
-    url: "#",
+    url: "https://mikesglorious.netlify.app/",
     image: "#",
     author: "Mikael Sundqvist",
     twitterUsername: "@MikeSundqvist",

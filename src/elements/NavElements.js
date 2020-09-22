@@ -8,7 +8,7 @@ export const NavWrapper = styled.nav`
     grid-row: 1 / 2;
     display: flex;
     align-items: center;
-
+    
     img {
         height: 4rem;
     }
@@ -27,7 +27,7 @@ export const NavElement = styled(props => <Link {...props}/>)`
     height: 4rem;
     margin: 2rem;
     padding: 1rem 0;
-    transition: font-size 0.3s ease;
+    //transition: font-size 0.3s ease;
     z-index: 10;
 
     img{
@@ -35,10 +35,41 @@ export const NavElement = styled(props => <Link {...props}/>)`
     }
     
     
-    &:hover,
-    &:focus {
-        font-size: 5rem;
-    }
+    // &:hover,
+    // &:focus {
+    //     font-size: 5rem;
+    // }
 
 `
+export const Ul = styled.ul`
 
+    margin-top: 6rem;
+    list-style: none;
+    position: relative;
+    z-index: 10;
+
+    li {
+        float: left;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    ul {
+        display: none;
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    li:hover ul,
+    li:focus ul{
+        display: block;
+    }
+
+    ul li{
+        float: none;
+    }
+
+
+`

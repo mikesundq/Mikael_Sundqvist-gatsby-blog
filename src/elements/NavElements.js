@@ -61,26 +61,31 @@ export const Ul = styled.ul`
     }
 
     ul {
-        display: none;
+        /* display: none; */
         list-style: none;
         
     }
 
+    li ul {
+        max-height: 0;
+        transition: max-height 0.35s ease-out;
+        overflow: hidden;
+    }
+
     li:hover ul,
     li:focus ul{
-        display: block;
+        /* display: block; */
         position: absolute;
         background-color: lime;
-        /* max-height: 50rem;
-        transition: max-height 0.45s ease-in; */
+        max-height: 50rem;
+        transition: max-height 2.45s ease-in;
         
     }
 
     ul li{
         float: none;
         margin: 1rem;
-        /* max-height: 0;
-        transition: max-height 0.35s ease-out; */
+       
     }
 
 

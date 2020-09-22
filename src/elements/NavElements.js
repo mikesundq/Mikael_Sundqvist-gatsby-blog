@@ -7,8 +7,12 @@ export const NavWrapper = styled.nav`
     grid-column: 2 / span 12;
     grid-row: 1 / 3;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: lightseagreen;
+    z-index: 20;
+    /* background-color: lightseagreen; */
+    
+    
     
     img {
         height: 4rem;
@@ -21,15 +25,19 @@ export const NavWrapper = styled.nav`
 `
 
 export const NavElement = styled(props => <Link {...props}/>)`
-    font-size: 4rem;
+    font-size: 1.125rem;
     line-height: 1.125rem;
     font-weight: 400;
     text-decoration: none;
-    height: 4rem;
-    margin: 2rem;
-    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    color: ${props => props.theme.colors.dark1};
+    height: 5rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
     //transition: font-size 0.3s ease;
-    z-index: 10;
+    z-index: 20;
 
     img{
         height: 2rem;
@@ -44,13 +52,13 @@ export const NavElement = styled(props => <Link {...props}/>)`
 `
 export const Ul = styled.ul`
 
-   
     list-style: none;
     position: relative;
-    z-index: 10;
-    background-color: grey;
-    padding-top: 1.7rem;
-   
+    z-index: 20;
+    /* background-color: grey; */
+    /* padding-top: 1.7rem; */
+    /* max-height: 112px; */
+    display: inline-block;
 
     li {
         float: left;
@@ -61,32 +69,41 @@ export const Ul = styled.ul`
     }
 
     ul {
-        /* display: none; */
         list-style: none;
+        max-width: 97px;
         
+    }
+
+    li ul a {
+        margin: 0;
+        background-color: grey;
+        align-content: center;
+    }
+
+    li ul a:hover,
+    li ul a:focus{
+        background-color: red;
     }
 
     li ul {
         max-height: 0;
-        transition: max-height 0.35s ease-out;
+        transition: max-height 0.15s ease-out;
         overflow: hidden;
+        position: absolute;
+        min-width: 14rem;
     }
 
     li:hover ul,
     li:focus ul{
-        /* display: block; */
-        position: absolute;
-        background-color: lime;
+        /* background-color: lime; */
         max-height: 50rem;
-        transition: max-height 2.45s ease-in;
+        transition: max-height 0.45s ease-in;
         
     }
 
     ul li{
         float: none;
-        margin: 1rem;
-       
+        margin: 0rem;
     }
-
-
+    
 `

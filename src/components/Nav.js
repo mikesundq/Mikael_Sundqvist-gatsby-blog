@@ -19,9 +19,20 @@ export const Nav = () => {
             posts: file(relativePath: { eq: "posts-icon.svg" }) {
                 publicURL
             }
+            allMdx(sort: {order: DESC, fields: frontmatter___date}) {
+                    edges {
+                    node {
+                        frontmatter {
+                        slug
+                        }
+                    }
+                    }
+                }
         }
 
     `)
+
+    const posts = data.allMdx.edges
 
     return (
         <NavWrapper>
@@ -30,28 +41,50 @@ export const Nav = () => {
                 <li>
                 <NavElement to="/">
                     <img src={data.home.publicURL} alt="Home"/>
-                    <P>Home</P>
+                    Home
+                    {/* <P>Home</P> */}
                 </NavElement>
                 </li>
                 <li>
                 <NavElement to="/about">
                     <img src={data.about.publicURL} alt="About"/>
-                    <P>About</P>
+                    About
+                    {/* <P>About</P> */}
                 </NavElement>
                 </li>
                 <li>
                 <NavElement to="#">
                     <img src={data.posts.publicURL} alt="Posts"/>
-                    <P>Posts</P>
+                    Posts
+                    {/* <P>Posts</P> */}
                 </NavElement>
                     <ul>
-                        <li>post1</li>
-                        <li>post2</li>
-                        <li>post3</li>
-                        <li>post4</li>
+                    {posts.map(post => (
+                    <li>
+                        <NavElement to={"/" + post.node.frontmatter.slug}>
+                            {post.node.frontmatter.slug}
+                        </NavElement>
+                    </li>
+                    ))}
                     </ul>
                 </li>
             </Ul>
         </NavWrapper>
     )
 }
+
+// export const pageQuery = graphql`
+
+//     query AllPostsQuery($skip : Int!, $limit: Int!) {
+//         allMdx(sort: {order: DESC, fields: frontmatter___date}) {
+//             edges {
+//               node {
+//                 frontmatter {
+//                   slug
+//                 }
+//               }
+//             }
+//           }
+//     }
+// `
+

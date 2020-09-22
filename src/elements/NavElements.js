@@ -5,9 +5,10 @@ import React from "react"
 
 export const NavWrapper = styled.nav`
     grid-column: 2 / span 12;
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
     display: flex;
     align-items: center;
+    background-color: lightseagreen;
     
     img {
         height: 4rem;
@@ -43,10 +44,13 @@ export const NavElement = styled(props => <Link {...props}/>)`
 `
 export const Ul = styled.ul`
 
-    margin-top: 6rem;
+   
     list-style: none;
     position: relative;
     z-index: 10;
+    background-color: grey;
+    padding-top: 1.7rem;
+   
 
     li {
         float: left;
@@ -59,16 +63,24 @@ export const Ul = styled.ul`
     ul {
         display: none;
         list-style: none;
-        margin-top: 1rem;
+        
     }
 
     li:hover ul,
     li:focus ul{
         display: block;
+        position: absolute;
+        background-color: lime;
+        /* max-height: 50rem;
+        transition: max-height 0.45s ease-in; */
+        
     }
 
     ul li{
         float: none;
+        margin: 1rem;
+        /* max-height: 0;
+        transition: max-height 0.35s ease-out; */
     }
 
 

@@ -5,7 +5,8 @@ import {
     Content,
     ContentCard,
     FeatureImage,
-    Pagination
+    Pagination,
+    Seo
 } from "../components"
 import { H1 } from "../elements"
 
@@ -20,6 +21,7 @@ const allPosts = ({pageContext, data}) => {
 
     return(
         <Container>
+          <Seo/>
             <FeatureImage/>
             <Content>
                 {/* i've allready set this h1 to width 100% */}

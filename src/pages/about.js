@@ -7,9 +7,9 @@ import {
 
 
 export default () => (
-   
-   <Container>
-       <FeatureImage/>
+  
+    <Container>
+        <FeatureImage/>
 
-   </Container>
+    </Container>
 )

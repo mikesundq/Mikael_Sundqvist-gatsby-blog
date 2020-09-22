@@ -7,7 +7,12 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Hej!"
+    title: "My Glorious Blog",
+    description: "A simple blog built with Gatsby and MDX",
+    url: "#",
+    image: "#",
+    author: "Mikael Sundqvist",
+    twitterUsername: "@MikeSundqvist",
   },
   plugins: [
     

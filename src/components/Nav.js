@@ -1,6 +1,6 @@
 import React from "react"
-import { NavWrapper } from "../elements"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { NavWrapper, P, NavElement } from "../elements"
+import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
 
@@ -16,22 +16,28 @@ export const Nav = () => {
             home: file(relativePath: { eq: "home-icon.svg" }) {
                 publicURL
             }
-            
+            posts: file(relativePath: { eq: "posts-icon.svg" }) {
+                publicURL
+            }
         }
 
     `)
 
     return (
         <NavWrapper>
-            <Link to="/">
-                <img src={data.logo.publicURL} alt="My Logo"/>
-            </Link>
-            <Link to="/about">
-                <img src={data.about.publicURL} alt="About"/>
-            </Link>
-            <Link to="/">
+            <img src={data.logo.publicURL} alt="My Logo"/>
+            <NavElement to="/">
                 <img src={data.home.publicURL} alt="Home"/>
-            </Link>
+                <P>Home</P>
+            </NavElement>
+            <NavElement to="/about">
+                <img src={data.about.publicURL} alt="About"/>
+                <P>About</P>
+            </NavElement>
+            <NavElement to="/about">
+                <img src={data.posts.publicURL} alt="Posts"/>
+                <P>Posts</P>
+            </NavElement>
         </NavWrapper>
     )
 }

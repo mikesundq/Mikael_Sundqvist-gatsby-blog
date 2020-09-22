@@ -1,5 +1,5 @@
 import React from "react"
-import { NavWrapper, P, NavElement, Ul } from "../elements"
+import { NavWrapper, NavElement, Ul } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
@@ -42,21 +42,18 @@ export const Nav = () => {
                 <NavElement to="/">
                     <img src={data.home.publicURL} alt="Home"/>
                     Home
-                    {/* <P>Home</P> */}
                 </NavElement>
                 </li>
                 <li>
                 <NavElement to="/about">
                     <img src={data.about.publicURL} alt="About"/>
                     About
-                    {/* <P>About</P> */}
                 </NavElement>
                 </li>
                 <li>
                 <NavElement to="#">
                     <img src={data.posts.publicURL} alt="Posts"/>
                     Posts
-                    {/* <P>Posts</P> */}
                 </NavElement>
                     <ul>
                     {posts.map(post => (

@@ -13,6 +13,9 @@ export const Nav = () => {
             about: file(relativePath: { eq: "about-icon.svg" }) {
                 publicURL
             }
+            home: file(relativePath: { eq: "home-icon.svg" }) {
+                publicURL
+            }
             
         }
 
@@ -25,6 +28,9 @@ export const Nav = () => {
             </Link>
             <Link to="/about">
                 <img src={data.about.publicURL} alt="About"/>
+            </Link>
+            <Link to="/">
+                <img src={data.home.publicURL} alt="Home"/>
             </Link>
         </NavWrapper>
     )

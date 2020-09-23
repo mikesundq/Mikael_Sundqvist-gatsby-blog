@@ -72,7 +72,7 @@ export const NavElement = styled(props => <Link {...props}/>)`
     z-index: 20;
 
     img {
-        height: 2rem;
+        height: 49px;
     }
     
     &:hover,
@@ -84,7 +84,7 @@ export const NavElement = styled(props => <Link {...props}/>)`
 
 export const BikeMenu = styled.div`
     img {
-        height: 5rem;
+        height: 81px;
     }
 
 `

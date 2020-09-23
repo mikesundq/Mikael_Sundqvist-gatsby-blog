@@ -1,5 +1,5 @@
 import React from "react"
-import { NavWrapper, NavElement, Ul } from "../elements"
+import { NavWrapper, NavElement, Ul, BikeMenu } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
@@ -36,22 +36,24 @@ export const Nav = () => {
 
     return (
         <NavWrapper>
-            <img src={data.logo.publicURL} alt="My Logo"/>
+            <BikeMenu>
+                <img src={data.logo.publicURL} alt="My Logo"/>
+            </BikeMenu>
             <Ul>
                 <li>
-                <NavElement to="/">
+                <NavElement class="nav" to="/">
                     <img src={data.home.publicURL} alt="Home"/>
                     Home
                 </NavElement>
                 </li>
                 <li>
-                <NavElement to="/about">
+                <NavElement class="nav" to="/about">
                     <img src={data.about.publicURL} alt="About"/>
                     About
                 </NavElement>
                 </li>
                 <li>
-                <NavElement to="#">
+                <NavElement class="nav" to="#">
                     <img src={data.posts.publicURL} alt="Posts"/>
                     Posts
                 </NavElement>
@@ -69,19 +71,3 @@ export const Nav = () => {
         </NavWrapper>
     )
 }
-
-// export const pageQuery = graphql`
-
-//     query AllPostsQuery($skip : Int!, $limit: Int!) {
-//         allMdx(sort: {order: DESC, fields: frontmatter___date}) {
-//             edges {
-//               node {
-//                 frontmatter {
-//                   slug
-//                 }
-//               }
-//             }
-//           }
-//     }
-// `
-

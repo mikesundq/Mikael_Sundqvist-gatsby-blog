@@ -10,17 +10,50 @@ export const NavWrapper = styled.nav`
     flex-wrap: wrap;
     align-items: center;
     z-index: 20;
-    /* background-color: lightseagreen; */
     
     
-    
-    img {
-        height: 4rem;
-    }
-
 
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2 / span 6;
+
+    }
+
+    @media ${props => props.theme.breakpoints.mobile}{
+        grid-column: 2 / span 12;
+        grid-row: 1 / 2;
+
+        div{
+            display: none;
+        }
+
+        justify-content: space-evenly;
+
+
+        ul div:hover,
+        ul div:focus {
+
+            display: block;
+
+
+            /* img{
+                height: 6rem;
+                
+            } */
+            
+        }
+
+
+        /* .logo:hover,
+        .logo:focus {
+            display: none;
+        }
+
+        .logo:onclick{
+            display: none;
+        } */
+
+
+
     }
 `
 
@@ -31,7 +64,6 @@ export const NavElement = styled(props => <Link {...props}/>)`
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    //align-items: center;
     color: ${props => props.theme.colors.dark1};
     height: 5rem;
     margin: 1rem;
@@ -39,25 +71,31 @@ export const NavElement = styled(props => <Link {...props}/>)`
     //transition: font-size 0.3s ease;
     z-index: 20;
 
-    img{
+    img {
         height: 2rem;
     }
     
-    
-    // &:hover,
-    // &:focus {
-    //     font-size: 5rem;
-    // }
+    &:hover,
+    &:focus {
+        background-color: grey;
+    }
 
 `
+
+export const BikeMenu = styled.div`
+    img {
+        height: 5rem;
+    }
+
+`
+
+
+
 export const Ul = styled.ul`
 
     list-style: none;
     position: relative;
     z-index: 20;
-    /* background-color: grey; */
-    /* padding-top: 1.7rem; */
-    /* max-height: 112px; */
     display: inline-block;
 
     li {
@@ -78,6 +116,8 @@ export const Ul = styled.ul`
         margin: 0;
         background-color: grey;
         align-content: center;
+        justify-content: center;
+        padding: 1rem 1rem;
     }
 
     li ul a:hover,
@@ -95,10 +135,8 @@ export const Ul = styled.ul`
 
     li:hover ul,
     li:focus ul{
-        /* background-color: lime; */
         max-height: 50rem;
         transition: max-height 0.45s ease-in;
-        
     }
 
     ul li{

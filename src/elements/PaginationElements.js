@@ -28,6 +28,11 @@ export const PaginationWrapper = styled.div`
     grid-row: auto;
     z-index: 15;
     }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        grid-column: 2 / span 6;
+    }
+
 `
 
 export const PaginationElement = styled(props => <Link {...props}/>)`

@@ -12,6 +12,12 @@ export const FooterWrapper = styled.footer`
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2 / span 6;
     }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        grid-column: 2 / span 6;
+        grid-row: 11;
+    }
+
 `
 
 export const FooterSocialWrapper = styled.div`

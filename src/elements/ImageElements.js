@@ -11,8 +11,9 @@ export const FeatureImageWrapper = styled.div`
         grid-column: 2 / span 6;
     }
 
-    /* @media ${props => props.theme.breakpoints.mobile}{
+    @media ${props => props.theme.breakpoints.mobile}{
+        grid-row: 3 / 5;
         grid-column: 2 / span 6;
-    } */
+    }
 
 `

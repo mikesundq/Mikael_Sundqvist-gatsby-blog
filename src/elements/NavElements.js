@@ -26,7 +26,7 @@ export const NavWrapper = styled.nav`
             display: none;
         }
 
-        justify-content: space-evenly;
+        justify-content: flex-start;
 
 
         ul div:hover,

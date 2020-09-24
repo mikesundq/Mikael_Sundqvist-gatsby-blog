@@ -36,12 +36,10 @@ export const NavLink = styled(props => <Link {...props}/>)`
     display: flex;
     flex-direction: column;
     color: ${props => props.theme.colors.dark1};
-    height: 5rem;
     margin: 1rem;
     padding: 1rem 2rem;
     transition: background-color 0.3s ease;
     z-index: 20;
-    
 
     img {
         height: 39px;

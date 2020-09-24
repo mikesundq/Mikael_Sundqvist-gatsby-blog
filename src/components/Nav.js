@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown, NavIcon } from "../elements"
+import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
@@ -48,19 +48,19 @@ export const Nav = () => {
             <Ul menu={menu}>
                 <li>
                 <NavLink class="nav" to="/">
-                    <NavIcon src={data.home.publicURL} max-height="100%" max-width="auto" alt="Home"/>
+                    <img src={data.home.publicURL} max-height="100%" max-width="auto" alt="Home"/>
                     Home
                 </NavLink>
                 </li>
                 <li>
                 <NavLink class="nav" to="/about">
-                    <NavIcon src={data.about.publicURL} max-height="100%" max-width="auto" alt="About"/>
+                    <img src={data.about.publicURL} max-height="100%" max-width="auto" alt="About"/>
                     About
                 </NavLink>
                 </li>
                 <li>
                 <NavLink class="nav" to="#">
-                    <NavIcon src={data.posts.publicURL} max-height="100%" max-width="auto" alt="Posts"/>
+                    <img src={data.posts.publicURL} max-height="100%" max-width="auto" alt="Posts"/>
                     Posts
                 </NavLink>
                     <UlDropDown>

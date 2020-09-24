@@ -15,13 +15,13 @@ export const Nav = () => {
             logo: file(relativePath: { eq: "logo.svg" }) {
                 publicURL
             }
-            about: file(relativePath: { eq: "about-icon.svg" }) {
+            about: file(relativePath: { eq: "engine.svg" }) {
                 publicURL
             }
-            home: file(relativePath: { eq: "home-icon.svg" }) {
+            home: file(relativePath: { eq: "garage.svg" }) {
                 publicURL
             }
-            posts: file(relativePath: { eq: "posts-icon.svg" }) {
+            posts: file(relativePath: { eq: "road.svg" }) {
                 publicURL
             }
             allMdx(sort: {order: DESC, fields: frontmatter___date}) {
@@ -42,7 +42,8 @@ export const Nav = () => {
     //using useState to make props
     const [ menu, showMenu ] = useState(false)
     
-
+    
+    //added max height/width to try and get rid of browser bug.. doesnt work!
     return (
         <NavWrapper>
             <BikeMenu menu={menu} onClick={() => showMenu(!menu)}>

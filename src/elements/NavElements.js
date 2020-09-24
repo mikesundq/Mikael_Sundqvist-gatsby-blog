@@ -41,6 +41,7 @@ export const NavLink = styled(props => <Link {...props}/>)`
     padding: 1rem 2rem;
     transition: background-color 0.3s ease;
     z-index: 20;
+    
 
     img {
         height: 39px;
@@ -56,6 +57,7 @@ export const NavLink = styled(props => <Link {...props}/>)`
 export const BikeMenu = styled.div`
     
     align-items: center;
+    
 
     display: none;
     img {

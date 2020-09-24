@@ -2,8 +2,8 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import React from "react"
 
-
 export const NavWrapper = styled.nav`
+    
     grid-column: 2 / span 12;
     grid-row: 1 / 3;
     display: flex;
@@ -23,37 +23,7 @@ export const NavWrapper = styled.nav`
         grid-column: 2 / span 12;
         grid-row: 1 / 2;
 
-        div{
-            display: none;
-        }
-
         justify-content: flex-start;
-
-
-        ul div:hover,
-        ul div:focus {
-
-            display: block;
-
-
-            /* img{
-                height: 6rem;
-                
-            } */
-            
-        }
-
-
-        /* .logo:hover,
-        .logo:focus {
-            display: none;
-        }
-
-        .logo:onclick{
-            display: none;
-        } */
-
-
 
     }
 `
@@ -78,30 +48,51 @@ export const NavLink = styled(props => <Link {...props}/>)`
     
     &:hover,
     &:focus {
-        background-color: grey;
+        background-color: ${props => props.theme.colors.dark3};
     }
 
 `
 
 export const BikeMenu = styled.div`
+    
+    align-items: center;
+
+    display: none;
     img {
         height: 81px;
+        transition: transform 0.25s;
+        transform: ${({menu}) => menu ? "rotate(-45deg)" : "rotate(0)"};
+    }
+
+    cursor: pointer;
+
+    @media ${props => props.theme.breakpoints.mobile}{
+        display: block;
+        width: 100%;
     }
 
 `
-
-
+// dropdown for posts
 export const UlDropDown = styled.ul`
 
-    list-style: none;
+
+    /* max-height transition makes the menu ease out - 
+    connected to li in Ul... */
     max-height: 0;
     transition: max-height 0.15s ease-out;
+    
     overflow: hidden;
     position: absolute;
+    list-style: none;
+
+    /* breakpoint 50rem 800px */
+    @media ${props => props.theme.breakpoints.mobile}{
+    }
 
     a {
         margin: 0;
-        background-color: grey;
+        background-color: ${props => props.theme.colors.dark1};
+        color: ${props => props.theme.colors.light2};
         align-content: center;
         justify-content: center;
         padding: 1rem 1rem;
@@ -109,7 +100,7 @@ export const UlDropDown = styled.ul`
 
     a:hover,
     a:focus {
-        background-color: red;
+        background-color: ${props => props.theme.colors.dark2};
     }
 
     li {
@@ -125,7 +116,8 @@ export const Ul = styled.ul`
     list-style: none;
     position: relative;
     z-index: 20;
-    display: inline-block;
+    background-color: ${props => props.theme.colors.light2};
+    
 
     li {
         float: left;
@@ -135,6 +127,14 @@ export const Ul = styled.ul`
         text-align: center;
     }
     
+    @media ${props => props.theme.breakpoints.mobile}{
+        /* making use of prop menu from nav.js in components */
+        display: ${({menu}) => menu ? "block" : "none"};
+        /* making use of prop menu from nav.js in components */
+    }
+
+    /* max-height transition is connected to UlDropDown -
+    makes the menu ease-in */
     li:hover ul,
     li:focus ul{
         max-height: 50rem;

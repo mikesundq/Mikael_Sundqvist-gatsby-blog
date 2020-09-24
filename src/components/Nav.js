@@ -1,8 +1,13 @@
-import React from "react"
+import React, {useState} from "react"
 import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
+
+
+
+
+
 
     const data = useStaticQuery(graphql`
         
@@ -33,13 +38,17 @@ export const Nav = () => {
     `)
 
     const posts = data.allMdx.edges
+    
+    //using useState to make props
+    const [ menu, showMenu ] = useState(false)
+    
 
     return (
         <NavWrapper>
-            <BikeMenu>
+            <BikeMenu menu={menu} onClick={() => showMenu(!menu)}>
                 <img src={data.logo.publicURL} alt="My Logo"/>
             </BikeMenu>
-            <Ul>
+            <Ul menu={menu}>
                 <li>
                 <NavLink class="nav" to="/">
                     <img src={data.home.publicURL} alt="Home"/>

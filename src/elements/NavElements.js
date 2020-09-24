@@ -28,40 +28,30 @@ export const NavWrapper = styled.nav`
     }
 `
 
-export const NavLinkBugFix = styled.a`
+// export const NavLinkBugFix = styled.a`
 
-    font-size: 1.125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    color: ${props => props.theme.colors.dark1};
-    margin: 1rem;
-    padding: 1rem 2rem;
-    transition: background-color 0.3s ease;
-    z-index: 20;
+//     font-size: 1.125rem;
+//     line-height: 1.125rem;
+//     font-weight: 400;
+//     text-decoration: none;
+//     display: flex;
+//     flex-direction: column;
+//     color: ${props => props.theme.colors.dark1};
+//     margin: 1rem;
+//     padding: 1rem 2rem;
+//     transition: background-color 0.3s ease;
+//     z-index: 20;
 
-    img {
-        height: 39px;
-    }
+//     img {
+//         height: 39px;
+//     }
     
-    &:hover,
-    &:focus {
-        background-color: ${props => props.theme.colors.dark3};
-    }
+//     &:hover,
+//     &:focus {
+//         background-color: ${props => props.theme.colors.dark3};
+//     }
 
-`
-
-
-
-
-
-
-
-
-
-
+// `
 
 export const NavLink = styled(props => <Link {...props}/>)`
     font-size: 1.125rem;

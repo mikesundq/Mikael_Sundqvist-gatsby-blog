@@ -1,12 +1,8 @@
 import React, {useState} from "react"
-import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown, NavLinkBugFix } from "../elements"
+import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
-
-
-
-
 
 
     const data = useStaticQuery(graphql`
@@ -51,28 +47,28 @@ export const Nav = () => {
             </BikeMenu>
             <Ul menu={menu}>
                 <li>
-                <NavLinkBugFix class="nav" to="/">
+                <NavLink class="nav" to="/">
                     <img src={data.home.publicURL} max-height="100%" max-width="auto" alt="Home"/>
                     Home
-                </NavLinkBugFix>
+                </NavLink>
                 </li>
                 <li>
-                <NavLinkBugFix class="nav" to="/about">
+                <NavLink class="nav" to="/about">
                     <img src={data.about.publicURL} max-height="100%" max-width="auto" alt="About"/>
                     About
-                </NavLinkBugFix>
+                </NavLink>
                 </li>
                 <li>
-                <NavLinkBugFix class="nav" to="#">
+                <NavLink class="nav" to="#">
                     <img src={data.posts.publicURL} max-height="100%" max-width="auto" alt="Posts"/>
                     Posts
-                </NavLinkBugFix>
+                </NavLink>
                     <UlDropDown>
                     {posts.map(post => (
                     <li>
-                        <NavLinkBugFix to={"/" + post.node.frontmatter.slug}>
+                        <NavLink to={"/" + post.node.frontmatter.slug}>
                             {post.node.frontmatter.slug}
-                        </NavLinkBugFix>
+                        </NavLink>
                     </li>
                     ))}
                     </UlDropDown>

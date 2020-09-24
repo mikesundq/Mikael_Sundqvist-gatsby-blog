@@ -46,24 +46,24 @@ export const Nav = () => {
     return (
         <NavWrapper>
             <BikeMenu menu={menu} onClick={() => showMenu(!menu)}>
-                <img src={data.logo.publicURL} alt="My Logo"/>
+                <img src={data.logo.publicURL} max-height="100%" max-width="auto" alt="My Logo"/>
             </BikeMenu>
             <Ul menu={menu}>
                 <li>
                 <NavLink class="nav" to="/">
-                    <img src={data.home.publicURL} alt="Home"/>
+                    <img src={data.home.publicURL} max-height="100%" max-width="auto" alt="Home"/>
                     Home
                 </NavLink>
                 </li>
                 <li>
                 <NavLink class="nav" to="/about">
-                    <img src={data.about.publicURL} alt="About"/>
+                    <img src={data.about.publicURL} max-height="100%" max-width="auto" alt="About"/>
                     About
                 </NavLink>
                 </li>
                 <li>
                 <NavLink class="nav" to="#">
-                    <img src={data.posts.publicURL} alt="Posts"/>
+                    <img src={data.posts.publicURL} max-height="100%" max-width="auto" alt="Posts"/>
                     Posts
                 </NavLink>
                     <UlDropDown>

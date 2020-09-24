@@ -1,5 +1,5 @@
 import React from "react"
-import { NavWrapper, NavElement, Ul, BikeMenu } from "../elements"
+import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
@@ -41,31 +41,31 @@ export const Nav = () => {
             </BikeMenu>
             <Ul>
                 <li>
-                <NavElement class="nav" to="/">
+                <NavLink class="nav" to="/">
                     <img src={data.home.publicURL} alt="Home"/>
                     Home
-                </NavElement>
+                </NavLink>
                 </li>
                 <li>
-                <NavElement class="nav" to="/about">
+                <NavLink class="nav" to="/about">
                     <img src={data.about.publicURL} alt="About"/>
                     About
-                </NavElement>
+                </NavLink>
                 </li>
                 <li>
-                <NavElement class="nav" to="#">
+                <NavLink class="nav" to="#">
                     <img src={data.posts.publicURL} alt="Posts"/>
                     Posts
-                </NavElement>
-                    <ul>
+                </NavLink>
+                    <UlDropDown>
                     {posts.map(post => (
                     <li>
-                        <NavElement to={"/" + post.node.frontmatter.slug}>
+                        <NavLink to={"/" + post.node.frontmatter.slug}>
                             {post.node.frontmatter.slug}
-                        </NavElement>
+                        </NavLink>
                     </li>
                     ))}
-                    </ul>
+                    </UlDropDown>
                 </li>
             </Ul>
         </NavWrapper>

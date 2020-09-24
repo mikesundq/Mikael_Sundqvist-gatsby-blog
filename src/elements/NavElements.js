@@ -9,6 +9,7 @@ export const NavWrapper = styled.nav`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-evenly;
     z-index: 20;
     
     
@@ -57,7 +58,7 @@ export const NavWrapper = styled.nav`
     }
 `
 
-export const NavElement = styled(props => <Link {...props}/>)`
+export const NavLink = styled(props => <Link {...props}/>)`
     font-size: 1.125rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -68,11 +69,11 @@ export const NavElement = styled(props => <Link {...props}/>)`
     height: 5rem;
     margin: 1rem;
     padding: 1rem 2rem;
-    //transition: font-size 0.3s ease;
+    transition: background-color 0.3s ease;
     z-index: 20;
 
     img {
-        height: 49px;
+        height: 39px;
     }
     
     &:hover,
@@ -90,6 +91,34 @@ export const BikeMenu = styled.div`
 `
 
 
+export const UlDropDown = styled.ul`
+
+    list-style: none;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    position: absolute;
+
+    a {
+        margin: 0;
+        background-color: grey;
+        align-content: center;
+        justify-content: center;
+        padding: 1rem 1rem;
+    }
+
+    a:hover,
+    a:focus {
+        background-color: red;
+    }
+
+    li {
+        float: none;
+        margin: 0rem;
+        min-width: 14rem;
+    }
+
+`
 
 export const Ul = styled.ul`
 
@@ -105,43 +134,10 @@ export const Ul = styled.ul`
     p {
         text-align: center;
     }
-
-    ul {
-        list-style: none;
-        max-width: 97px;
-        
-    }
-
-    li ul a {
-        margin: 0;
-        background-color: grey;
-        align-content: center;
-        justify-content: center;
-        padding: 1rem 1rem;
-    }
-
-    li ul a:hover,
-    li ul a:focus{
-        background-color: red;
-    }
-
-    li ul {
-        max-height: 0;
-        transition: max-height 0.15s ease-out;
-        overflow: hidden;
-        position: absolute;
-        min-width: 14rem;
-    }
-
+    
     li:hover ul,
     li:focus ul{
         max-height: 50rem;
         transition: max-height 0.45s ease-in;
     }
-
-    ul li{
-        float: none;
-        margin: 0rem;
-    }
-    
 `

@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown } from "../elements"
+import { NavWrapper, NavLink, Ul, BikeMenu, UlDropDown, NavLinkBugFix } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const Nav = () => {
@@ -43,7 +43,7 @@ export const Nav = () => {
     const [ menu, showMenu ] = useState(false)
     
     
-    //added max height/width to try and get rid of browser bug.. doesnt work!
+    
     return (
         <NavWrapper>
             <BikeMenu menu={menu} onClick={() => showMenu(!menu)}>
@@ -51,28 +51,28 @@ export const Nav = () => {
             </BikeMenu>
             <Ul menu={menu}>
                 <li>
-                <NavLink class="nav" to="/">
+                <NavLinkBugFix class="nav" to="/">
                     <img src={data.home.publicURL} max-height="100%" max-width="auto" alt="Home"/>
                     Home
-                </NavLink>
+                </NavLinkBugFix>
                 </li>
                 <li>
-                <NavLink class="nav" to="/about">
+                <NavLinkBugFix class="nav" to="/about">
                     <img src={data.about.publicURL} max-height="100%" max-width="auto" alt="About"/>
                     About
-                </NavLink>
+                </NavLinkBugFix>
                 </li>
                 <li>
-                <NavLink class="nav" to="#">
+                <NavLinkBugFix class="nav" to="#">
                     <img src={data.posts.publicURL} max-height="100%" max-width="auto" alt="Posts"/>
                     Posts
-                </NavLink>
+                </NavLinkBugFix>
                     <UlDropDown>
                     {posts.map(post => (
                     <li>
-                        <NavLink to={"/" + post.node.frontmatter.slug}>
+                        <NavLinkBugFix to={"/" + post.node.frontmatter.slug}>
                             {post.node.frontmatter.slug}
-                        </NavLink>
+                        </NavLinkBugFix>
                     </li>
                     ))}
                     </UlDropDown>

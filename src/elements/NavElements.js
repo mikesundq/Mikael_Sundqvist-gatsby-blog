@@ -12,8 +12,6 @@ export const NavWrapper = styled.nav`
     justify-content: space-evenly;
     z-index: 20;
     
-    
-
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2 / span 6;
 
@@ -77,7 +75,7 @@ export const UlDropDown = styled.ul`
 
 
     /* max-height transition makes the menu ease out - 
-    connected to li in Ul... */
+    connected to Ul li... */
     max-height: 0;
     transition: max-height 0.15s ease-out;
     

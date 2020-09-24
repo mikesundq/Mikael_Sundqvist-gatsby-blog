@@ -66,9 +66,9 @@ export const NavLink = styled(props => <Link {...props}/>)`
     transition: background-color 0.3s ease;
     z-index: 20;
 
-    img {
-        height: 39px;
-    }
+    // img {
+    //     height: 39px;
+    // }
     
     &:hover,
     &:focus {
@@ -76,6 +76,14 @@ export const NavLink = styled(props => <Link {...props}/>)`
     }
 
 `
+
+export const NavIcon = styled.img`
+    height: 39px;
+`
+
+
+
+
 
 export const BikeMenu = styled.div`
     

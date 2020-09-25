@@ -22,6 +22,7 @@ export const PaginationWrapper = styled.div`
         cursor: ${props => (props.isLast ? "default" : "pointer")};
     }
 
+    /* I move the arrows to the bottom when showing on smaller screens */
     @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2 / span 6;
     justify-content: space-evenly;

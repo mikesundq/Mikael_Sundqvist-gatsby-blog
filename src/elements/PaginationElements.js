@@ -24,7 +24,8 @@ export const PaginationWrapper = styled.div`
 
     @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2 / span 6;
-    justify-content: center;
+    /* maybe change this later, I don't want both my arrows to move when hovering */
+    /* justify-content: space-evenly; */
     grid-row: auto;
     z-index: 15;
     }

@@ -8,7 +8,8 @@ export const CardWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     /* max-width: 20rem; */
-    background-color: green;
+    background-color: ${props => props.theme.colors.dark3};
+    border-radius: 3px;
     min-width: 15rem;
     min-height: 20rem;
     justify-content: center;

@@ -50,19 +50,19 @@ export const Nav = () => {
             </BikeMenu>
             <Ul menu={menu}>
                 <li>
-                <NavLink class="nav" to="/">
+                <NavLink to="/">
                     <img src={data.home.publicURL} alt="Home"/>
                     Home
                 </NavLink>
                 </li>
                 <li>
-                <NavLink class="nav" to="/about">
+                <NavLink to="/about">
                     <img src={data.about.publicURL} alt="About"/>
                     About
                 </NavLink>
                 </li>
                 <li>
-                <NavLink class="nav" to="#">
+                <NavLink to="#">
                     <img src={data.posts.publicURL} alt="Posts"/>
                     Posts
                 </NavLink>

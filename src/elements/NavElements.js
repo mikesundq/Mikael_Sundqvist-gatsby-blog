@@ -26,7 +26,7 @@ export const NavWrapper = styled.nav`
     }
 `
 
-export const NavLink = styled(props => <Link {...props}/>)`
+export const NavLink = styled(props => <Link {...props} />)`
     font-size: 1.125rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -59,7 +59,7 @@ export const BikeMenu = styled.div`
     img {
         height: 81px;
         transition: transform 0.25s;
-        transform: ${({menu}) => menu ? "rotate(-45deg)" : "rotate(0)"};
+        transform: ${({ menu }) => menu ? "rotate(-45deg)" : "rotate(0)"};
     }
 
     cursor: pointer;
@@ -127,7 +127,7 @@ export const Ul = styled.ul`
     
     @media ${props => props.theme.breakpoints.mobile}{
         /* making use of prop menu from nav.js in components */
-        display: ${({menu}) => menu ? "block" : "none"};
+        display: ${({ menu }) => menu ? "block" : "none"};
         /* making use of prop menu from nav.js in components */
     }
 
